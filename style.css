@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box; /* Añadido para asegurar que el padding no afecte el ancho total */
+}
+
+body {
+    background-color: #f4f4fc;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center; /* Centra el logo verticalmente */
+    padding: 0 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 70px); /* Ajusta la altura para ocupar el espacio restante después del header */
+    display: flex;
+    justify-content: space-around; /* Distribuye el espacio entre las secciones */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    padding: 20px;
+}
+
+.contenedorcajatexto {
+    width: 100%;
+    max-width: 600px; /* Limita el ancho máximo */
+    height: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.cajatexto {
+    width: 100%;
+    height: 300px;
+    border: none;
+    background-color: #f4f4fc;
+    cursor: pointer;
+    color: #0A3871;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.cajatexto::placeholder {
+    color: #0A3871;
+}
+
+.alerta {
+    display: flex;
+    color: #495057;
+    margin: 20px 0;
+    justify-content: center; /* Centra la alerta */
+}
+
+.contenedor-botones {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    flex-wrap: wrap; /* Permite que los botones se ajusten en pantallas pequeñas */
+    gap: 20px; /* Añade espacio entre los botones */
+}
+
+.btn-encriptar, .btn-desencriptar {
+    width: 200px; /* Ajusta el tamaño de los botones para pantallas pequeñas */
+    height: 50px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-encriptar {
+    background-color: #0A3871;
+    color: white;
+}
+
+.btn-desencriptar {
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+.seccion2 {
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo */
+    background-color: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.50);
+    padding: 20px;
+    margin: 20px auto; /* Centra la sección */
+}
+
+.contenedormunieco {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenedor-parrafo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenedor-parrafo h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #343A40;
+}
+
+.contenedor-parrafo p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #495057;
+    margin-top: 10px;
+}
+
+.contenedor-resultado {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto 20px auto; /* Centra y añade margen inferior */
+    text-align: center;
+}
+
+.contenedor-resultado p {
+    color: #495057;
+    font-size: 25px;
+}
+
+.contenedor-copiar {
+    display: flex;
+    justify-content: center; /* Centra el botón de copiar */
+    margin-bottom: 20px;
+}
+
+.btn-copiar {
+    width: 100%;
+    max-width: 328px; /* Limita el ancho máximo */
+    height: 50px;
+    border-radius: 24px;
+    background-color: #ffffff;
+    color: #0A3871;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #0A3871;
+    cursor: pointer;
+}
+
+.ocultar {
+    display: none;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .contenedorcajatexto {
+        max-width: 1200px;
+    }
+
+    .contenedormunieco{
+        display: none;
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .seccion2 {
+        max-width: 100%;
+        padding: auto;
+    }
+
+    .contenedor-resultado {
+        max-width: 100%;
+    }
+
+    .btn-copiar {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cajatexto {
+        font-size: 24px;
+        height: 200px;
+    }
+
+    .contenedormunieco{
+        display:none;
+    }
+
+    .contenedor-parrafo h3 {
+        font-size: 20px;
+    }
+
+    .contenedor-parrafo p {
+        font-size: 14px;
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        font-size: 14px;
+        height: 45px;
+    }
+
+    .btn-copiar {
+        font-size: 14px;
+        height: 45px;
+    }
+}
